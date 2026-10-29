@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Beer Llama — podpora</title>
+<meta name="description" content="Čárky z hospodského lístku v telefonu. Zdarma, bez účtu, bez sledování. · The strokes from the pub slip, on your phone. Free, no account, no tracking.">
+<style>
+  :root { --accent: #9A5B00; --ink: #1c1c1e; --muted: #6b6b70; --bg: #ffffff; --card: #f6f2ea; --line: #ece7dc; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent: #F5B83D; --ink: #f2f2f7; --muted: #a1a1a8; --bg: #1c1c1e; --card: #2a2620; --line: #3a352c; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         color: var(--ink); background: var(--bg); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { text-align: center; padding: 28px 0 8px; }
+  .logo { width: 112px; height: 112px; border-radius: 25px; overflow: hidden; display: inline-block;
+          box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+  .logo svg { width: 100%; height: 100%; display: block; }
+  h1 { font-size: 34px; margin: 16px 0 4px; }
+  .tag { color: var(--muted); margin: 0 0 8px; }
+  h2 { font-size: 22px; margin: 36px 0 8px; }
+  h3 { font-size: 18px; margin: 20px 0 4px; }
+  a { color: var(--accent); }
+  .pill { display: inline-block; background: var(--card); color: var(--accent); padding: 2px 10px;
+          border-radius: 999px; font-size: 14px; font-weight: 600; }
+  .note { background: var(--card); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  ul.why { list-style: none; padding-left: 0; margin: 12px 0; }
+  ul.why li { padding-left: 26px; position: relative; margin-bottom: 6px; }
+  ul.why li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 48px; }
+  .lang { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-top: 40px; }
+  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+        <rect width="1024" height="1024" fill="#1C1C1E"/>
+        <g transform="translate(-56 0)">
+          <g transform="translate(420 86) rotate(-14)"><path d="M0 300C-44 190-48 80-12 8c14-24 42-18 47 10 18 96 18 190 13 282z" fill="#FFF8E7" stroke="#1C1C1E" stroke-width="20" stroke-linejoin="round"/><path d="M8 230c-16-56-18-124-3-180" fill="none" stroke="#E8B97A" stroke-width="26" stroke-linecap="round"/></g>
+          <g transform="translate(596 76) rotate(12)"><path d="M0 300C-44 190-48 80-12 8c14-24 42-18 47 10 18 96 18 190 13 282z" fill="#FFF8E7" stroke="#1C1C1E" stroke-width="20" stroke-linejoin="round"/><path d="M8 230c-16-56-18-124-3-180" fill="none" stroke="#E8B97A" stroke-width="26" stroke-linecap="round"/></g>
+          <path d="M752 486h44a120 120 0 0 1 0 240h-44" fill="none" stroke="#F5B83D" stroke-width="64"/>
+          <rect x="276" y="400" width="476" height="500" rx="64" fill="#F5B83D"/>
+          <g stroke="#FFF8E7" stroke-opacity="0.4" stroke-width="26" stroke-linecap="round"><path d="M376 540v280M476 540v280M576 540v280M672 540v280"/></g>
+          <g fill="#FFF8E7"><circle cx="318" cy="402" r="74"/><circle cx="420" cy="352" r="96"/><circle cx="546" cy="342" r="100"/><circle cx="658" cy="374" r="84"/><circle cx="712" cy="418" r="52"/></g>
+          <g fill="#1C1C1E"><ellipse cx="470" cy="404" rx="20" ry="26"/><ellipse cx="584" cy="400" rx="20" ry="26"/></g>
+          <g fill="#FFFFFF"><circle cx="477" cy="394" r="7"/><circle cx="591" cy="390" r="7"/></g>
+        </g>
+      </svg>
+    </div>
+    <h1>Beer Llama</h1>
+    <p class="tag">Počítadlo piv – čárky z lístku · Beer counter for your pub tab</p>
+    <span class="pill">Podpora / Support</span>
+  </header>
+
+  <h2>Co to je</h2>
+  <p>Celý stůl má jeden papírový lístek a číšník na něj dělá čárky. Na konci večera přijde otázka
+     „dohromady, nebo zvlášť?“ – a nikdo neví, kolik toho vlastně měl. Beer Llama si tvoje čárky
+     pamatuje za tebe: ťukneš, když ti donesou pivo, a na konci večera víš, co říct číšníkovi.</p>
+
+  <h2>Proč Beer Llama</h2>
+  <ul class="why">
+    <li><strong>Jedním ťuknutím</strong> – velké, malé, šnyt, víno, panák, koleno na tři. Položky si pojmenuješ sám.</li>
+    <li><strong>Na zamčené obrazovce</strong> – počet a tlačítko + na zamčené obrazovce i v Dynamic Islandu.</li>
+    <li><strong>Hospody a ceny</strong> – appka pozná podnik, přepne na jeho menu a spočítá přibližnou útratu.</li>
+    <li><strong>Zdarma a soukromě</strong> – bez účtu, bez reklam, bez sledování. Data jsou v telefonu a ve tvém iCloudu.</li>
+  </ul>
+
+  <h2>Časté otázky</h2>
+  <h3>Proč + na zamčené obrazovce chce Face ID?</h3>
+  <p>Tak to iOS dělá u všech tlačítek na zamčené obrazovce: mrkneš na telefon a ťukneš. Bez odemykání
+     přidáš pivo ovládacím prvkem „Přidat pivo“: dej si ho do Ovládacího centra, nebo na tlačítko Akce
+     (Nastavení iOS → Tlačítko Akce → Ovládání).</p>
+  <h3>Zobrazování na zamčené obrazovce nechci.</h3>
+  <p>V appce: ⋯ → Nastavení → Zobrazovat na zamčené obrazovce.</p>
+  <h3>Appka nepoznala hospodu.</h3>
+  <p>Podnik se pozná, když jsi do 75 metrů od místa, kde je uložený, a Beer Llama smí používat
+     <em>přesnou</em> polohu (Nastavení iOS → Beer Llama → Poloha). Jinak ťukni na název podniku
+     nahoře a vyber ho sám.</p>
+  <h3>Kdy se lístek uzavře?</h3>
+  <p>Sám ve 4:00 ráno, nebo když ťukneš na Nový lístek. Uzavřené lístky najdeš v Historii a můžeš
+     je dál upravovat, i dopsat zapomenuté pivo. Staré lístky si můžeš uklidit: v Historii přejeď přes
+     lístek prstem a ťukni na Archivovat. Archivované najdeš dole v Historii pod Archiv (N) a
+     přejetím a ťuknutím na Obnovit je vrátíš zpátky.</p>
+  <h3>Mám nový telefon. Kde jsou moje čárky?</h3>
+  <p>Když jsi na obou telefonech přihlášený ke stejnému Apple účtu a máš zapnutý iCloud, data se
+     přenesou sama. Nastavení (třeba zobrazování na zamčené obrazovce) si každý telefon pamatuje zvlášť.</p>
+  <h3>Jak smažu svoje data?</h3>
+  <p>Smaž appku z telefonu. Kopii v iCloudu smažeš v Nastavení iOS → tvoje jméno → iCloud →
+     Spravovat úložiště → Beer Llama.</p>
+
+  <h2>Kontakt</h2>
+  <p>Dotazy, chyby, nápady: <a href="mailto:jiri.zajic@mensa.cz">jiri.zajic@mensa.cz</a></p>
+  <p><a href="privacy.html">Zásady ochrany soukromí / Privacy Policy →</a></p>
+
+  <hr>
+
+  <p class="lang">English</p>
+  <h2>What it is</h2>
+  <p>In a Czech pub the whole table shares one paper slip, and the waiter adds a stroke for every beer.
+     At the end of the night comes the question “together or separately?” – and nobody remembers what
+     they had. Beer Llama keeps your own strokes: tap when your drink arrives, and at the end of the
+     night you know exactly what to tell the waiter.</p>
+
+  <h2>Why Beer Llama</h2>
+  <ul class="why">
+    <li><strong>One tap</strong> – a large beer, a small one, wine, a shot, a pork knuckle shared three ways. Name your own items.</li>
+    <li><strong>On the Lock Screen</strong> – your count and a + button on the Lock Screen and in the Dynamic Island.</li>
+    <li><strong>Pubs and prices</strong> – the app recognises the pub, switches to its menu and adds up roughly what the night cost.</li>
+    <li><strong>Free and private</strong> – no account, no ads, no tracking. Your data stays on your phone and in your iCloud.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  <h3>Why does the Lock Screen + want Face ID?</h3>
+  <p>iOS does that for every button on the Lock Screen: glance at the phone, then tap. To add a beer
+     without unlocking, use the “Add Beer” control in Control Center or on the Action Button
+     (iOS Settings → Action Button → Controls).</p>
+  <h3>I don't want my count on the Lock Screen.</h3>
+  <p>In the app: ⋯ → Settings → Show on Lock Screen.</p>
+  <h3>The app didn't recognise the pub.</h3>
+  <p>A pub is recognised within 75 metres of where it was saved, and only with <em>precise</em> location
+     (iOS Settings → Beer Llama → Location). Otherwise tap the pub's name at the top and pick it yourself.</p>
+  <h3>When does a slip close?</h3>
+  <p>By itself at 4 a.m., or when you start a new slip. Closed slips are in History; you can still edit
+     them and add a forgotten drink. To tidy up old slips, swipe one in History and tap Archive;
+     archived slips are under Archive (N) at the bottom of History, and a swipe on Restore brings one back.</p>
+  <h3>I have a new phone. Where are my strokes?</h3>
+  <p>With iCloud on and the same Apple Account on both phones, your data comes across by itself.
+     Settings (such as the Lock Screen display) stay per phone.</p>
+  <h3>How do I delete my data?</h3>
+  <p>Delete the app. To delete the iCloud copy: iOS Settings → your name → iCloud → Manage Storage → Beer Llama.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, bugs, ideas: <a href="mailto:jiri.zajic@mensa.cz">jiri.zajic@mensa.cz</a></p>
+  <p><a href="privacy.html">Privacy Policy →</a></p>
+
+  <footer>Beer Llama · pro tátu a štamgasty · made in Czechia</footer>
+</div>
+</body>
+</html>
