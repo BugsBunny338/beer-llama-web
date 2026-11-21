@@ -34,7 +34,16 @@
   .lang { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-top: 40px; }
   hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
   .store { margin: 16px 0 12px; }
-  .store img { height: 48px; width: auto; vertical-align: middle; }
+  .store a, .store .soon { display: inline-block; position: relative; margin: 4px 5px; vertical-align: middle; }
+  .store img { height: 48px; width: auto; vertical-align: middle; display: block; }
+  /* Not on Google Play yet: the official badge, greyed out, not a link; "coming soon" on hover/focus/tap. */
+  .store .soon { cursor: default; border-radius: 8px; outline-offset: 3px; }
+  .store .soon img { filter: grayscale(1); opacity: .4; }
+  .store .soon::after { content: attr(data-soon); position: absolute; inset: 0; display: flex;
+                        align-items: center; justify-content: center; border-radius: 8px;
+                        background: rgba(28,28,30,.82); color: #fff; font-size: 15px; font-weight: 600;
+                        opacity: 0; transition: opacity .15s; }
+  .store .soon:hover::after, .store .soon:focus::after { opacity: 1; }
 </style>
 </head>
 <body>
@@ -57,7 +66,7 @@
     </div>
     <h1>Beer Llama</h1>
     <p class="tag">Počítadlo piv – čárky z lístku · Beer counter for your pub tab</p>
-    <p class="store"><a href="https://apps.apple.com/cz/app/beer-llama/id6826888863"><img src="img/app-store-cs.svg" alt="Stáhnout v App Store" height="48"></a></p>
+    <p class="store"><a href="https://apps.apple.com/cz/app/beer-llama/id6826888863"><img src="img/app-store-cs.svg" alt="Stáhnout v App Store" height="48"></a><span class="soon" tabindex="0" data-soon="Již brzy" title="Na Google Play již brzy"><img src="img/google-play-cs.png" alt="Google Play – již brzy" height="48"></span></p>
     <span class="pill">Podpora / Support</span>
   </header>
 
@@ -104,7 +113,7 @@
   <hr>
 
   <p class="lang">English</p>
-  <p class="store"><a href="https://apps.apple.com/app/beer-llama/id6826888863"><img src="img/app-store-en.svg" alt="Download on the App Store" height="48"></a></p>
+  <p class="store"><a href="https://apps.apple.com/app/beer-llama/id6826888863"><img src="img/app-store-en.svg" alt="Download on the App Store" height="48"></a><span class="soon" tabindex="0" data-soon="Coming soon" title="Coming soon to Google Play"><img src="img/google-play-en.png" alt="Google Play – coming soon" height="48"></span></p>
   <h2>What it is</h2>
   <p>In a Czech pub the whole table shares one paper slip, and the waiter adds a stroke for every beer.
      At the end of the night comes the question “together or separately?” – and nobody remembers what
