@@ -44,9 +44,10 @@
   .store .soon img { filter: grayscale(1); opacity: .4; }
   .store .soon::after { content: attr(data-soon); position: absolute; inset: 0; display: flex;
                         align-items: center; justify-content: center; border-radius: 8px;
-                        background: rgba(28,28,30,.82); color: #fff; font-size: 15px; font-weight: 600;
-                        opacity: 0; transition: opacity .15s; }
-  .store .soon:hover::after, .store .soon:focus::after { opacity: 1; }
+                        background: var(--bg); border: 1px solid var(--muted); color: var(--ink);
+                        font-size: 15px; font-weight: 600; opacity: 0; transition: opacity .15s; }
+  /* :focus-visible (keyboard) rather than :focus, so a mouse click doesn't leave the label stuck. */
+  .store .soon:hover::after, .store .soon:focus-visible::after { opacity: 1; }
 </style>
 </head>
 <body>
@@ -69,7 +70,7 @@
     </div>
     <h1>Beer Llama</h1>
     <p class="tag">Počítadlo piv – čárky z lístku · Beer counter for your pub tab</p>
-    <p class="store"><a href="https://apps.apple.com/cz/app/beer-llama/id6826888863"><img src="img/app-store-cs.svg" alt="Stáhnout v App Store" height="48"></a><span class="soon" tabindex="0" data-soon="Již brzy" title="Na Google Play již brzy"><img src="img/google-play-cs.png" alt="Google Play – již brzy" height="48"></span></p>
+    <p class="store"><a href="https://apps.apple.com/cz/app/beer-llama/id6826888863"><img src="img/app-store-cs.svg" alt="Stáhnout v App Store" height="48"></a><span class="soon" tabindex="0" data-soon="Připravujeme" title="Na Google Play připravujeme"><img src="img/google-play-cs.png" alt="Google Play – připravujeme" height="48"></span></p>
     <span class="pill">Podpora / Support</span>
   </header>
 
